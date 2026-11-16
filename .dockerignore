@@ -1,0 +1,6 @@
+.git
+.gitignore
+*.tar
+data/
+__pycache__/
+*.pyc
