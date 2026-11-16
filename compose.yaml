@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    image: myapp:v0.9.0
+    container_name: myapp_container
+    ports:
+      - "8080:5000" # Пробрасываем порт 8080 наружу
+    volumes:
+      - app_data:/app/data # Именованный том для сохранения данных
+    restart: unless-stopped # Автоматический перезапуск (требование варианта)
+volumes:
+  app_data:
